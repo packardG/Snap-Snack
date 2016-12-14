@@ -9,11 +9,14 @@ Step 1: If not already installed on your machine, install Node.js from the offic
 
 
 Step 2: Assuming you are using Linux/Unix, 'cd' into the project directory: `cd snap_snack`
-	
+
+
 Step 3: Next, install the dependencies we've used with this command: `npm install`
 
+
 Step 4: Once, the install is complete, you can start the web server with this command: `node index.js`
-	
+
+
 Now you should see an output in the terminal like this:
 $ Example app listening on port 8080!
 

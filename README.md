@@ -8,7 +8,7 @@ git clone [This repository]
 Step 1: If not already installed on your machine, install Node.js from the official website (https://nodejs.org/en/)
 
 
-Step 2: Assuming you are using Linux/Unix, 'cd' into the project directory: `cd snap_snack`
+Step 2: Assuming you are using Linux/Unix, 'cd' into the project directory: `cd Snap-Snack`
 
 
 Step 3: Next, install the dependencies we've used with this command: `npm install`

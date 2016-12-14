@@ -1,0 +1,47 @@
+html, body {
+	font-family: 'Helvetica', 'Verdana', sans-serif;
+/*	background-color: #a9c538; */
+	background-image: url('/img/bg.png'); 
+}
+
+.panel {
+	border: 1px solid #a9c538;
+}
+
+.modal-header {
+	background-color: #a9c538;
+}
+
+.navbar-default .navbar-header > a:hover, .navbar-default .navbar-header > a:focus {
+	background-color: #3373b4;
+	color: white;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    background-color: #3373b4;
+    color: white;
+}
+
+.modal-title {
+	color: white;
+}
+
+.page-header {
+	border-bottom: none;
+}
+
+.panel-body {
+	background-color: #3373b4;
+}
+
+.panel-body p {
+	color: white;
+}
+
+small {
+	color: #333 !important;
+}
+
+.pagination {
+	width: auto;
+}

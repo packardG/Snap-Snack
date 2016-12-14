@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	<title>Snap & Snack | Welcome!</title>
+
+	<!-- Bootstrap -->
+	<script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+	<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css'>
+	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+	<link rel='shortcut icon' href='../img/favicon.ico'>
+	<link href="../css/cover.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<!-- Upload Modal -->
+
+	<div class='modal fade' id='uploadModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
+		<div class='modal-dialog' role='document'>
+			<div class='modal-content'>
+				<div class='modal-header'>
+					<button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+							<span aria-hidden='true'>&times;</span>
+						</button>
+					<h4 class='modal-title' id='modal-label'>Upload A New Image</h4>
+				</div>
+				<div class='modal-body'>
+					<img class='img-responsive' src='../img/capture.png'>
+				</div>
+				<div class='modal-footer'>
+					<button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
+					<a type='button' role='button' class='btn btn-primary' href='/home'>Submit</a>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- End Upload Modal -->
+
+	<div class='container'>
+		<div class='jumbotron' style='text-align:center;'>
+			<h1 style='color:#a9c538;'>Snap & Snack</h1>
+			<p class='lead'>A revolutionary way to discover new recipes.</p>
+			<br><img src='../img/icon-black.png'>
+		</div>
+		<div class='col-md-12 text-center'>
+			<a type='button' role='button' class='btn btn-primary btn-lg' data-toggle='modal' href='#uploadModal' style='margin:15px;'>Upload Image</a>
+			<p><strong>OR</strong></p>
+			<a type='button' role='button' class='btn btn-primary btn-lg' href='/home-trending'>Homepage</a>
+		</div>
+	</div>
+</body>
+
+</html>

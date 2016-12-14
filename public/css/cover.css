@@ -1,0 +1,9 @@
+body {
+	font-family: 'Trebuchet', 'Helvetica', 'Verdana', sans-serif;
+	background: url('/img/bg.png');
+}
+
+.jumbotron {
+	border: 1px solid #a9c538;
+	background-color: white;
+}

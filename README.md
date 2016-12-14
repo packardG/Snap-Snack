@@ -15,8 +15,8 @@ Step 2: Assuming you are using Linux/Unix, `cd` into the project directory
 	Once done with the install process run this next command to start the web server.
 	$ node index.js
 	
-	Now you should see an output in the terminal like this:
-	$ Example app listening on port 8080!
+Now you should see an output in the terminal like this:
+$ Example app listening on port 8080!
 
 
 Step 3: Point your browser to http://localhost:8080

@@ -3,7 +3,7 @@ UI Design for CS325
 
 Steps for viewing our UI prototype:
 
-git clone [This repository]
+git clone https://github.com/packardG/Snap-Snack.git
 
 Step 1: If not already installed on your machine, install Node.js from the official website (https://nodejs.org/en/)
 

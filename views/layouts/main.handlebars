@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Snap & Snack | Home</title>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css'>
+    <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+    <!-- Local css to overwrite some bootstrap -->
+    <link rel='shortcut icon' href='../img/favicon.ico'>
+    <link href="../css/main.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+    <!-- Share Modal -->
+
+    <div class='modal fade' id='shareModal' tabindex="-1" role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
+        <div class='modal-dialog' role='document'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+						<span aria-hidden='true'>&times;</span>
+					</button>
+                    <h4 class='modal-title' id='modal-label'>Success!</h4>
+                </div>
+                <div class='modal-body'>
+                    <strong>Chicken Parmesan</strong> has been uploaded to our recipe database!
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-secondary' data-dismiss='modal'>Undo</button>
+                    <button type='button' class='btn btn-primary' data-dismiss='modal'>Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Share Modal -->
+
+    <!-- Edit Modal here -->
+    <div class='modal fade' id='editModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+        <div class='modal-dialog' role='document'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+					<span aria-hidden='true'>&times;</span>
+				</button>
+                    <h4 class='modal-title' style='margin:15px;'>Chicken Parmesan<span class='glyphicon glyphicon-star-empty' aria-hidden='true' style='margin:10px;'></span><span class='glyphicon glyphicon-pencil' aria-hidden='true' style='margin:10px;'></span></h4>
+                </div>
+                <div class='modal-body'>
+                    <p>Time: 55 minutes</p><br>
+                    <p>Difficulty: 2</p><br>
+                    <div class='panel panel-default'>
+                        <div class='panel-heading'>Ingredients</div>
+                        <div class='panel-body'>
+                            <p><strong>Description: </strong> This is a classic dish featured in restaurants all around the world. A staple for all ages, chicken parm is a delicious meal great for both last minute dinner plans, or planned dinner parties.</p>
+                        </div>
+                        <ul class='list-group'>
+                            <li class='list-group-item'>Boneless skinless chicken breast 1.5lb</li>
+                            <li class='list-group-item'>2 eggs</li>
+                            <li class='list-group-item'>Bread crumbs 2.5 cups</li>
+                            <li class='list-group-item'>A.P. Flour 1 cup</li>
+                            <li class='list-group-item'>1lb of spaghetti</li>
+                            <li class='list-group-item'>1 Jar of store bought tomato sauce</li>
+                            <li class='list-group-item'>Fresh provolone cheese 2 cups</li>
+                            <li class='list-group-item'>Salt & Pepper to taste</li>
+                            <li class='list-group-item'>2 tbsp Olive Oil</li>
+                        </ul>
+                    </div>
+                    <div class='panel panel-default'>
+                        <div class='panel-heading'>Instructions</div>
+                        <ul class='list-group'>
+                            <li class='list-group-item'><strong>1. </strong> Preheat oven to 375&deg;</li>
+                            <li class='list-group-item'><strong>2. </strong> Dredge each breast in flour, then dip in beaten eggs, and coat in the breadcrumbs. Place breaded breasts on lined baking sheet.</li>
+                            <li class='list-group-item'><strong>3. </strong> Get a stock pot of water going on the stovetop. Add a pinch of salt.</li>
+                            <li class='list-group-item'><strong>4. </strong> Top breaded chicken breasts with some sauce and then cheese. Then, in the oven they go for 35min or until cooked throughout.</li>
+                            <li class='list-group-item'><strong>5. </strong> When water is to a rolling boil, add in spaghetti and cook for 8 minutes.</li>
+                            <li class='list-group-item'><strong>6. </strong> Strain pasta when it is al-dente and toss in some oil or butter.</li>
+                            <li class='list-group-item'><strong>7. </strong> When chicken is done, lay a bed of spaghetti on each plate with a bit of sauce and finally the chicken breast.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-primary' data-dismiss='modal'>Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Edit Modal -->
+
+    <!-- Sign in Modal -->
+
+    <div class='modal fade' id='signModal' tabindex="-1" role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
+        <div class='modal-dialog' role='document'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+						<span aria-hidden='true'>&times;</span>
+					</button>
+                    <h4 class='modal-title' id='modal-label'>User Log In</h4>
+                </div>
+                <div class='modal-body'>
+                    <div class="form-group">
+                        <label>Username:</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label>Password:</label>
+                        <input type="password" class="form-control">
+                    </div>
+                    <div class="checkbox">
+                        <label><input type="checkbox" value="">Remember Me</label>
+                    </div>
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-link' style='float:left;'>Forgot Password</button>
+                    <button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
+                    <button type='button' class='btn btn-primary' data-dismiss='modal'>Log In</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Sign in Modal -->
+
+    <!-- Favorite Modal -->
+
+    <div class='modal fade' id='favModal' tabindex="-1" role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
+        <div class='modal-dialog' role='document'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+						<span aria-hidden='true'>&times;</span>
+					</button>
+                    <h4 class='modal-title' id='modal-label'>Recipe Favorited</h4>
+                </div>
+                <div class='modal-body'>
+                    <strong>Chicken Parmesan</strong> has been added to your Favorites list!
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-secondary' data-dismiss='modal'>Undo</button>
+                    <button type='button' class='btn btn-primary' data-dismiss='modal'>Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Favorite Modal -->
+
+    <!-- Remove Modal -->
+
+    <div class='modal fade' id='removeModal' tabindex="-1" role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
+        <div class='modal-dialog' role='document'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+						<span aria-hidden='true'>&times;</span>
+					</button>
+                    <h4 class='modal-title' id='modal-label'>Recipe Removed</h4>
+                </div>
+                <div class='modal-body'>
+                    <strong>Chicken Parmesan</strong> was removed from the list.
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-secondary' data-dismiss='modal'>Undo</button>
+                    <button type='button' class='btn btn-primary' data-dismiss='modal'>Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Remove Modal -->
+
+    <!-- Add Modal -->
+
+    <div class='modal fade' id='addModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
+        <div class='modal-dialog' role='document'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+						<span aria-hidden='true'>&times;</span>
+					</button>
+                    <h4 class='modal-title' id='modal-label'>Add A New Recipe</h4>
+                </div>
+                <div class='modal-body'>
+                    <div class='form-group'>
+                        <label> Recipe Title: </label>
+                        <input type='text' class='form-control' placeholder='e.g. Pork Dumplings'>
+                    </div>
+                    <p><strong>Difficulty: </strong>
+                        <label class='radio-inline' style='margin:15px;'><input type='radio' name='optradio'>1</label>
+                        <label class='radio-inline' style='margin:15px;'><input type='radio' name='optradio'>2</label>
+                        <label class='radio-inline'><input type='radio' name='optradio'>3</label>
+                    </p>
+                    <div class='form-group'>
+                        <label>Time: </label>
+                        <input type='text' class='form-control' placeholder='e.g. 1hr 35min'>
+                    </div>
+                    <div class='form-group'>
+                        <label>Recipe Description:</label>
+                        <textarea class='form-control' rows='3'></textarea>
+                    </div>
+                    <p><strong>Add Ingredient:</strong></p>
+                    <div class='input-group'>
+                        <input type='text' class='form-control' placeholder='chicken,tomato,avocado,etc.'>
+                        <span class='input-group-btn'>
+							<button type='button' class='btn btn-default'>Add</button>
+						</span>
+                    </div>
+
+                    <div class='panel panel-default'>
+                        <div class='panel-heading'>These are the ingredients your recipe uses:</div>
+                        <table class='table'>
+                            <tr>
+                                <th>Ingredient</th>
+                                <th>Remove</th>
+                            </tr>
+                            <tr>
+                                <td>Carrot</td>
+                                <td><button type='button' class='btn btn-default btn-sm' aria-label='Remove'>
+	                                                        	<span class='glyphicon glyphicon-remove-circle' aria-hidden='true'></span>
+	                                                	</button></td>
+                            </tr>
+                            <tr>
+                                <td>Red Pepper</td>
+                                <td><button type='button' class='btn btn-default btn-sm' aria-label='Remove'>
+	                                                                <span class='glyphicon glyphicon-remove-circle' aria-hidden='true'></span>
+	                                                        </button></td>
+                            </tr>
+                            <tr>
+                                <td>Veal</td>
+                                <td><button type='button' class='btn btn-default btn-sm' aria-label='Remove'>
+	                                                                <span class='glyphicon glyphicon-remove-circle' aria-hidden='true'></span>
+	                                                        </button></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class='form-group'>
+                        <label>Instructions:</label>
+                        <textarea class='form-control' rows='8'></textarea>
+                    </div>
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
+                    <a type='button' role='button' class='btn btn-primary' href='/myRecipes'>Submit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Add Modal -->
+
+    <!-- Upload Modal -->
+
+    <div class='modal fade' id='uploadModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
+        <div class='modal-dialog' role='document'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+						<span aria-hidden='true'>&times;</span>
+					</button>
+                    <h4 class='modal-title' id='modal-label'>Upload A New Image</h4>
+                </div>
+                <div class='modal-body'>
+                    <img class='img-responsive' src='../img/capture.png'>
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
+                    <a type='button' role='button' class='btn btn-primary' href='/home'>Submit</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- End Upload Modal -->
+
+    <!-- Recipe Modal here -->
+    <div class='modal fade' id='myModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel'>
+        <div class='modal-dialog' role='document'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+				<span aria-hidden='true'>&times;</span>
+			</button>
+                    <h4 class='modal-title' style='margin:15px;'>Chicken Parmesan
+						<span class='glyphicon glyphicon-star-empty' aria-hidden='true' style='margin:10px;'></span>
+					</h4>
+                </div>
+                <div class='modal-body'>
+                    <p>Time: 55 minutes</p><br>
+                    <p>Difficulty: 2</p><br>
+                    <div class='panel panel-default'>
+                        <div class='panel-heading'>Ingredients</div>
+                        <div class='panel-body'>
+                            <p><strong>Description: </strong> This is a classic dish featured in restaurants all around the world. A staple for all ages, chicken parm is a delicious meal great for both last minute dinner plans, or planned dinner parties.</p>
+                        </div>
+                        <ul class='list-group'>
+                            <li class='list-group-item'>Boneless skinless chicken breast 1.5lb</li>
+                            <li class='list-group-item'>2 eggs</li>
+                            <li class='list-group-item'>Bread crumbs 2.5 cups</li>
+                            <li class='list-group-item'>A.P. Flour 1 cup</li>
+                            <li class='list-group-item'>1lb of spaghetti</li>
+                            <li class='list-group-item'>1 Jar of store bought tomato sauce</li>
+                            <li class='list-group-item'>Fresh provolone cheese 2 cups</li>
+                            <li class='list-group-item'>Salt & Pepper to taste</li>
+                            <li class='list-group-item'>2 tbsp Olive Oil</li>
+                        </ul>
+                    </div>
+                    <div class='panel panel-default'>
+                        <div class='panel-heading'>Instructions</div>
+                        <ul class='list-group'>
+                            <li class='list-group-item'><strong>1. </strong> Preheat oven to 375&deg;</li>
+                            <li class='list-group-item'><strong>2. </strong> Dredge each breast in flour, then dip in beaten eggs, and coat in the breadcrumbs. Place breaded breasts on lined baking sheet.</li>
+                            <li class='list-group-item'><strong>3. </strong> Get a stock pot of water going on the stovetop. Add a pinch of salt.</li>
+                            <li class='list-group-item'><strong>4. </strong> Top breaded chicken breasts with some sauce and then cheese. Then, in the oven they go for 35min or until cooked throughout.</li>
+                            <li class='list-group-item'><strong>5. </strong> When water is to a rolling boil, add in spaghetti and cook for 8 minutes.</li>
+                            <li class='list-group-item'><strong>6. </strong> Strain pasta when it is al-dente and toss in some oil or butter.</li>
+                            <li class='list-group-item'><strong>7. </strong> When chicken is done, lay a bed of spaghetti on each plate with a bit of sauce and finally the chicken breast.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-primary' data-dismiss='modal'>Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Recipe Modal -->
+
+
+    <!-- Filter Modal -->
+    <div class='modal fade' id='filterModal' tabindex='-1' role='dialog' aria-labelledby='myModalLabel' aria-hidden='true'>
+        <div class='modal-dialog' role='document'>
+            <div class='modal-content'>
+                <div class='modal-header'>
+                    <button type='button' class='close' data-dismiss='modal' aria-label='Close'>
+					<span aria-hidden='true'>&times;</span>
+				</button>
+                    <h4 class='modal-title'>Filter Your Results</h4>
+                </div>
+                <div class='modal-body'>
+                    <p><strong>Time: </strong>
+                        <label class='radio-inline' style='margin:15px;'><input type='radio' name='optradio'>Less than 1hr</label>
+                        <label class='radio-inline'><input type='radio' name='optradio'>Greater than 1hr</label>
+                    </p>
+                    <p><strong>Difficulty: </strong>
+                        <label class='radio-inline' style='margin:15px;'><input type='radio' name='optradio'>1</label>
+                        <label class='radio-inline' style='margin:15px;'><input type='radio' name='optradio'>2</label>
+                        <label class='radio-inline'><input type='radio' name='optradio'>3</label>
+                    </p>
+
+                    <p><strong>Dietary Restrictions: </strong><br>
+                        <label class='checkbox-inline'><input type='checkbox' value=''>Vegetarian</label>
+                        <label class='checkbox-inline'><input type='checkbox' value=''>Dairy Free</label>
+                        <label class='checkbox-inline'><input type='checkbox' value=''>Gluten Free</label>
+                        <label class='checkbox-inline'><input type='checkbox' value=''>Vegan</label>
+                    </p>
+                    <p>Filter by <strong>Ingredient:</strong></p>
+                    <div class='input-group'>
+                        <input type='text' class='form-control' placeholder='chicken,tomato,avocado,etc.'>
+                        <span class='input-group-btn'>
+						<button type='button' class='btn btn-default'>Add</button>
+					</span>
+                    </div>
+
+                    <div class='panel panel-default'>
+                        <div class='panel-heading'>Finding recipes that use:</div>
+                        <table class='table'>
+                            <tr>
+                                <th>Ingredient</th>
+                                <th>Remove</th>
+                            </tr>
+                            <tr>
+                                <td>Carrot</td>
+                                <td><button type='button' class='btn btn-default btn-sm' aria-label='Remove'>
+                                                        	<span class='glyphicon glyphicon-remove-circle' aria-hidden='true'></span>
+                                                	</button></td>
+                            </tr>
+                            <tr>
+                                <td>Red Pepper</td>
+                                <td><button type='button' class='btn btn-default btn-sm' aria-label='Remove'>
+                                                                <span class='glyphicon glyphicon-remove-circle' aria-hidden='true'></span>
+                                                        </button></td>
+                            </tr>
+                            <tr>
+                                <td>Veal</td>
+                                <td><button type='button' class='btn btn-default btn-sm' aria-label='Remove'>
+                                                                <span class='glyphicon glyphicon-remove-circle' aria-hidden='true'></span>
+                                                        </button></td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class='modal-footer'>
+                    <button type='button' class='btn btn-danger' style='float:left;'>Clear all filters</button>
+                    <button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
+                    <button type='button' class='btn btn-primary' data-dismiss='modal'>Confirm</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Filter Modal -->
+
+
+    <nav class='navbar navbar-default'>
+        <div class='container-fluid'>
+            <div class='navbar-header'>
+                <a class='navbar-brand' href='/'>Snap & Snack</a>
+            </div>
+
+            <ul class='nav navbar-nav'>
+                <li class='active'><a href='/home'>Home</a></li>
+                <li><a href='/myRecipes'>My Recipes</a></li>
+                <li><a href='/myIngredients'>My Ingredients</a></li>
+                <li><a href='/Favorites'>Favorites</a></li>
+            </ul>
+            <button type='button' class='btn btn-primary navbar-btn navbar-right' data-toggle='modal' data-target='#addModal' style='margin:10px;'>Add Recipe</button>
+            <button type='button' class='btn btn-primary navbar-btn navbar-right' data-toggle='modal' data-target='#uploadModal' style='margin:10px;'>Upload</button>
+            <form class='navbar-form navbar-right' id='navSearch'>
+                <div class='form-group'>
+                    <input type='text' class='form-control' placeholder='Search'>
+                </div>
+                <button type='submit' class='btn btn-default'>
+				<span class='glyphicon glyphicon-search' aria-hidden='true'></span>
+			</button>
+            </form>
+            <button type='button' class='btn btn-warning navbar-btn navbar-right' data-toggle='modal' data-target='#signModal'>Sign in</button>
+        </div>
+    </nav>
+
+    <div class='page-header'>
+        <h2 style='margin:15px;'>{{t1}}   <small style='margin:15px;'>{{t2}}</small></h2>
+    </div>
+
+
+    {{{body}}}
+
+
+    <div class='text-center'>
+        <ul class='pagination'>
+            <li><a href='#' aria-label='Previous'><span aria-hidden='true'>&laquo;</span></a></li>
+            <li class='active'><a href='#'>1 <span class='sr-only'>(current)</span></a></li>
+            <li><a href='#'>2 <span class='sr-only'></span></a></li>
+            <li><a href='#'>3 <span class='sr-only'></span></a></li>
+            <li><a href='#'>4 <span class='sr-only'></span></a></li>
+            <li><a href='#'>5 <span class='sr-only'></span></a></li>
+            <li><a href='#'>6 <span class='sr-only'></span></a></li>
+            <li><a href='#' aria-label='Next'><span aria-hidden='true'>&raquo;</span></a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

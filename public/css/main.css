@@ -4,6 +4,10 @@ html, body {
 	background-image: url('/img/bg.png'); 
 }
 
+#navSearch input {
+	width: 300px;
+}
+
 .panel {
 	border: 1px solid #a9c538;
 }
@@ -13,12 +17,12 @@ html, body {
 }
 
 .navbar-default .navbar-header > a:hover, .navbar-default .navbar-header > a:focus {
-	background-color: #3373b4;
+	background-color: #a9c538;
 	color: white;
 }
 
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    background-color: #3373b4;
+    background-color: #a9c538;
     color: white;
 }
 

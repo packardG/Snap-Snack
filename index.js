@@ -4,28 +4,48 @@ var app = express();
 
 app.use(express.static(path.join(__dirname, 'public')));
 
+// Set up handlebars view engine
+var handlebars = require('express-handlebars').create({defaultLayout: 'main' });
+app.engine('handlebars', handlebars.engine);
+app.set('view engine', 'handlebars');
+
 app.get('/', function (req,res) {
-	res.sendFile('public/views/welcome.html', {root:__dirname});
+	res.sendFile('views/welcome.html', {root:__dirname});
 });
 
 app.get('/home', function(req,res) {
-	res.sendFile('public/views/home.html', {root:__dirname});
+	res.render('home', {
+		t1: "What's on the menu today?",
+		t2: "Log in, or sign up to save your favorites!",
+	});
 });
 
 app.get('/favorites', function(req,res) {
-	res.sendFile('public/views/favorites.html', {root:__dirname});
+	res.render('favorites', {
+		t1: "Your Favorite Recipes",
+		t2: "All in one place!",
+	});
 });
 
 app.get('/myRecipes', function(req,res) {
-	res.sendFile('public/views/myRecipes.html', {root:__dirname});
+	res.render('myRecipes', {
+		t1: "Recipes You've Added",
+		t2: "A list of your best work!",
+	});
 });
 
 app.get('/myIngredients', function(req,res) {
-	res.sendFile('public/views/myIngredients.html', {root:__dirname});
+	res.render('myIngredients', {
+		t1: "Your Ingredients",
+		t2: "Here's what we're working with!",
+	});
 });
 
 app.get('/home-trending', function(req,res) {
-	res.sendFile('public/views/home-trending.html', {root:__dirname});
+	res.render('home-trending', {
+		t1: "What's on the menu today?",
+		t2: "Log in, or sign up to save your favorites!",
+	});
 });
 
 app.listen(8080, function () {

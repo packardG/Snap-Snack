@@ -1,7 +1,6 @@
 <div class='panel panel-default'>
 	<div class='panel-heading'>Your Recipes
 		<span class='badge'>74</span>
-		<span><button type='button' class='btn btn-default btn-sm navbar-btn' data-toggle='modal' data-target='#filterModal' stlye='margin:15px;'>Filter</button></span>
 	</div>
 	<div class='panel-body'>
 		<p>Here is a list of recipes that you can make with what is already in your fridge!
@@ -11,7 +10,9 @@
 	<table class='table'>
 		<tr>
 			<th>#</th>
-			<th>Title</th>
+			<th>Title
+				<span><button id='filterButton' type='button' class='btn btn-default btn-xs navbar-btn' data-toggle='modal' data-target='#filterModal'>Filter Results</button></span>
+			</th>
 			<th>Details</th>
 			<th>Difficulty
 				<button type='button' class='btn btn-default btn-xs' aria-label='Sort'>

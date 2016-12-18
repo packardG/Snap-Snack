@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Snap & Snack | Home</title>
+    <title>Snap & Snack</title>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js'></script>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css'>
@@ -410,13 +410,12 @@
             </div>
 
             <ul class='nav navbar-nav'>
-                <li class='active'><a href='/home'>Home</a></li>
+                <li><a href='/home'>Home</a></li>
                 <li><a href='/myRecipes'>My Recipes</a></li>
                 <li><a href='/myIngredients'>My Ingredients</a></li>
                 <li><a href='/Favorites'>Favorites</a></li>
             </ul>
-            <button type='button' class='btn btn-primary navbar-btn navbar-right' data-toggle='modal' data-target='#addModal' style='margin:10px;'>Add Recipe</button>
-            <button type='button' class='btn btn-primary navbar-btn navbar-right' data-toggle='modal' data-target='#uploadModal' style='margin:10px;'>Upload</button>
+            <button type='button' class='btn btn-warning navbar-btn navbar-right' data-toggle='modal' data-target='#signModal' style='margin-right:10px;'>Sign in</button>
             <form class='navbar-form navbar-right' id='navSearch'>
                 <div class='form-group'>
                     <input type='text' class='form-control' placeholder='Search'>
@@ -425,7 +424,8 @@
 				<span class='glyphicon glyphicon-search' aria-hidden='true'></span>
 			</button>
             </form>
-            <button type='button' class='btn btn-warning navbar-btn navbar-right' data-toggle='modal' data-target='#signModal'>Sign in</button>
+            <button type='button' class='btn btn-primary navbar-btn navbar-right' data-toggle='modal' data-target='#addModal' style='margin:10px;'>Add Recipe</button>
+            <button type='button' class='btn btn-primary navbar-btn navbar-right' data-toggle='modal' data-target='#uploadModal' style='margin:10px;'>Upload</button>
         </div>
     </nav>
 

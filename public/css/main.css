@@ -4,6 +4,14 @@ html, body {
 	background-image: url('/img/bg.png'); 
 }
 
+
+
+#filterButton {
+	margin-top: -13px;
+    margin-bottom: -10px;
+    margin-left: 22px;
+}
+
 #navSearch input {
 	width: 300px;
 }
